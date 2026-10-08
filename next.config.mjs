@@ -4,6 +4,8 @@ const nextConfig = {
   output: "export",
   images: { unoptimized: true },
   reactStrictMode: true,
+  // Every page exports as <route>/index.html, which every static host serves at /<route>/.
+  trailingSlash: true,
 };
 
 export default nextConfig;

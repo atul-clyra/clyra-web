@@ -1,0 +1,594 @@
+[
+ {
+  "k": "h1",
+  "t": "Privacy Policy"
+ },
+ {
+  "k": "p",
+  "t": "**Effective Date:** 15 Dec 2023"
+ },
+ {
+  "k": "h2",
+  "t": "Table of Contents"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "• Introduction and Legal Framework"
+   },
+   {
+    "t": "• Information Collection and Usage"
+   },
+   {
+    "t": "• Data Processing and Protection"
+   },
+   {
+    "t": "• Information Sharing and Third-Party Processors"
+   },
+   {
+    "t": "• Data Retention and Deletion"
+   },
+   {
+    "t": "• User Rights"
+   },
+   {
+    "t": "• Contact and Grievance Redressal"
+   },
+   {
+    "t": "• International Data Transfers"
+   },
+   {
+    "t": "• Data Breach Notification"
+   },
+   {
+    "t": "• Disclaimer"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "A. Introduction and Legal Framework"
+ },
+ {
+  "k": "p",
+  "t": "This Privacy Policy is governed by UAE Federal Decree-Law No. 45 of 2021 on Personal Data Protection and related regulations, including DIFC Data Protection Law. As an educational consulting service provider, Clyra Technologies Ltd (\"we,\" \"us,\" or \"our\") is committed to protecting your privacy and ensuring transparent data practices."
+ },
+ {
+  "k": "h3",
+  "t": "Minimum Age & Children's Data"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Minimum age to use the platform: **16 years**"
+   },
+   {
+    "t": "Users under 16 are **blocked from registration**"
+   },
+   {
+    "t": "Users aged **16-17** receive enhanced safeguards:",
+    "c": [
+     {
+      "t": "No targeted advertising"
+     },
+     {
+      "t": "Limited data collection"
+     },
+     {
+      "t": "Easy and fast account deletion"
+     }
+    ]
+   },
+   {
+    "t": "Age verification is enforced at registration"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "B. Information Collection and Usage"
+ },
+ {
+  "k": "h3",
+  "t": "1. Information We Collect:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "**Identity data:** name, email"
+   },
+   {
+    "t": "**Academic data:** year of study, date of birth (for age verification)"
+   },
+   {
+    "t": "**Account data:** preferences, settings"
+   },
+   {
+    "t": "**User-generated content:** uploaded files, text"
+   },
+   {
+    "t": "**Usage data:** feature usage, timestamps"
+   },
+   {
+    "t": "**Payment metadata:** transaction IDs, invoices (no card data stored)"
+   }
+  ]
+ },
+ {
+  "k": "p",
+  "t": "**Note:** We do not collect sensitive personal data such as health information, religious beliefs, biometric data, or political views."
+ },
+ {
+  "k": "h3",
+  "t": "2. Purpose of Collection:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Account creation and authentication"
+   },
+   {
+    "t": "AI-powered content processing"
+   },
+   {
+    "t": "Platform security and fraud prevention"
+   },
+   {
+    "t": "Customer support"
+   },
+   {
+    "t": "Billing and compliance obligations"
+   },
+   {
+    "t": "Analytics (pseudonymised only)"
+   }
+  ]
+ },
+ {
+  "k": "h3",
+  "t": "3. Technical Information:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Cookies and similar technologies"
+   },
+   {
+    "t": "Log information"
+   },
+   {
+    "t": "Device information"
+   },
+   {
+    "t": "Usage patterns"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "C. Data Processing and Protection"
+ },
+ {
+  "k": "h3",
+  "t": "1. Data Security:"
+ },
+ {
+  "k": "p",
+  "t": "We implement comprehensive security safeguards to protect your data:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "**Encryption at rest:** AES-256 encryption for stored data"
+   },
+   {
+    "t": "**Encryption in transit:** TLS 1.2+ / TLS 1.3 for data transmission"
+   },
+   {
+    "t": "**Role-based access control (RBAC):** Access restricted to authorized personnel only"
+   },
+   {
+    "t": "**Audit logging:** Comprehensive logging of all data access and modifications"
+   },
+   {
+    "t": "**Breach detection and response:** Automated monitoring and incident response mechanisms"
+   },
+   {
+    "t": "Regular security audits and assessments"
+   },
+   {
+    "t": "Staff training on data protection and security best practices"
+   }
+  ]
+ },
+ {
+  "k": "h3",
+  "t": "2. Cookie Policy:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Essential cookies for website functionality"
+   },
+   {
+    "t": "Analytics cookies (with user consent)"
+   },
+   {
+    "t": "Preference cookies"
+   },
+   {
+    "t": "Users may disable cookies through browser settings"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "D. Information Sharing and Third-Party Processors"
+ },
+ {
+  "k": "p",
+  "t": "We share information only in these circumstances:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "With your explicit consent"
+   },
+   {
+    "t": "For service delivery purposes with:",
+    "c": [
+     {
+      "t": "Educational institutions (as part of consulting services)"
+     },
+     {
+      "t": "Payment processors"
+     },
+     {
+      "t": "Technology service providers"
+     }
+    ]
+   },
+   {
+    "t": "Legal requirements under UAE law"
+   },
+   {
+    "t": "Protection of our legal rights"
+   }
+  ]
+ },
+ {
+  "k": "h3",
+  "t": "Third-Party Processors"
+ },
+ {
+  "k": "p",
+  "t": "We use the following third-party service providers to process your data:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "**AWS** – hosting and infrastructure"
+   },
+   {
+    "t": "**OpenAI** – AI processing"
+   },
+   {
+    "t": "**Anthropic** – AI processing"
+   },
+   {
+    "t": "**Stripe** – payments"
+   },
+   {
+    "t": "**Mixpanel** – analytics (pseudonymised)"
+   }
+  ]
+ },
+ {
+  "k": "p",
+  "t": "**Important disclosures:**"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Data is processed transiently by these providers"
+   },
+   {
+    "t": "User data is **not used to train AI models**"
+   },
+   {
+    "t": "Only minimum necessary data is shared with processors"
+   },
+   {
+    "t": "All processors are bound by data processing agreements (DPAs) and Standard Contractual Clauses"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "E. Data Retention and Deletion"
+ },
+ {
+  "k": "h3",
+  "t": "Retention Period:"
+ },
+ {
+  "k": "p",
+  "t": "We retain data for specific, defined periods as outlined below:"
+ },
+ {
+  "k": "table",
+  "rows": [
+   [
+    "Data Category",
+    "Retention Period"
+   ],
+   [
+    "Uploaded content",
+    "12 months"
+   ],
+   [
+    "Closed account data",
+    "Deleted after 30 days"
+   ],
+   [
+    "System & security logs",
+    "90 days"
+   ],
+   [
+    "Analytics (aggregated/anonymised)",
+    "24 months"
+   ],
+   [
+    "Payment records",
+    "7 years (managed by Stripe)"
+   ]
+  ]
+ },
+ {
+  "k": "h3",
+  "t": "Data Deletion:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Submit requests to datadel@heyclyra.com"
+   },
+   {
+    "t": "Subject line: \"Data Deletion Request - [Your Email]\""
+   },
+   {
+    "t": "Processing time: 30 days from verification of your request"
+   },
+   {
+    "t": "We will delete or irreversibly anonymize personal data unless retention is required to meet legal, regulatory, fraud-prevention, or billing obligations"
+   },
+   {
+    "t": "Exceptions: Legal requirements and legitimate business needs"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "F. User Rights"
+ },
+ {
+  "k": "p",
+  "t": "Under UAE law and DIFC Data Protection Law, you have the right to:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Access your personal data"
+   },
+   {
+    "t": "Download your data (JSON / machine-readable format)"
+   },
+   {
+    "t": "Correct inaccurate data"
+   },
+   {
+    "t": "Delete your account"
+   },
+   {
+    "t": "Withdraw consent"
+   },
+   {
+    "t": "Data portability"
+   },
+   {
+    "t": "Request a copy of your tracking and usage data; we will provide an export (Excel or PDF) to your verified email"
+   }
+  ]
+ },
+ {
+  "k": "p",
+  "t": "**Response timeline:** We will respond to your requests within **30 days** of verification."
+ },
+ {
+  "k": "p",
+  "t": "**Contact:** To exercise these rights, please contact us at [privacy@heyclyra.com](mailto:privacy@heyclyra.com). We will verify your identity before fulfilling the request."
+ },
+ {
+  "k": "h2",
+  "t": "G. Contact and Grievance Redressal"
+ },
+ {
+  "k": "h3",
+  "t": "1. Primary Contact:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Email: support@heyclyra.com"
+   },
+   {
+    "t": "Response time: 24 hours"
+   }
+  ]
+ },
+ {
+  "k": "h3",
+  "t": "2. Grievance Officer:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Name: Rohit Singh"
+   },
+   {
+    "t": "Email: privacy@heyclyra.com"
+   },
+   {
+    "t": "Address: Clyra Technologies Ltd, First Floor, Innovation One, DIFC, Dubai, UAE 74777."
+   },
+   {
+    "t": "Response time: 48 hours"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "H. International Data Transfers"
+ },
+ {
+  "k": "p",
+  "t": "Your data is stored and processed only in **US and EU regions**. We do not store or process any data in India or other jurisdictions outside of US/EU regions. All international data transfers are protected by:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Data Processing Agreements (DPAs) with all processors"
+   },
+   {
+    "t": "Standard Contractual Clauses (SCCs) as required by applicable data protection laws"
+   },
+   {
+    "t": "Adequate safeguards as required under DIFC Data Protection Law"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "I. Data Breach Notification"
+ },
+ {
+  "k": "p",
+  "t": "In the event of a data breach that may affect your personal data, we commit to:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Notify affected users **without undue delay** after becoming aware of the breach"
+   },
+   {
+    "t": "Notify the DIFC Commissioner at [dp@difc.ae](mailto:dp@difc.ae) as required by law"
+   },
+   {
+    "t": "Provide clear information about the nature of the breach, data affected, and steps being taken to address it"
+   },
+   {
+    "t": "Offer guidance on protective measures users can take"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "J. Disclaimer"
+ },
+ {
+  "k": "h3",
+  "t": "Service Limitations:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Information accuracy is dependent on user input"
+   },
+   {
+    "t": "Educational institution decisions beyond our control"
+   },
+   {
+    "t": "Technical service interruptions are possible"
+   }
+  ]
+ },
+ {
+  "k": "h3",
+  "t": "Third-Party Links:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Not responsible for external websites"
+   },
+   {
+    "t": "Separate privacy policies may apply"
+   },
+   {
+    "t": "User discretion advised"
+   }
+  ]
+ },
+ {
+  "k": "h3",
+  "t": "Liability:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Limited as per UAE law"
+   },
+   {
+    "t": "Force majeure provisions apply"
+   },
+   {
+    "t": "User responsibility for data accuracy"
+   }
+  ]
+ },
+ {
+  "k": "h2",
+  "t": "Updates to Privacy Policy"
+ },
+ {
+  "k": "p",
+  "t": "We reserve the right to update this policy in compliance with UAE laws. Users will be notified of significant changes through:"
+ },
+ {
+  "k": "ul",
+  "items": [
+   {
+    "t": "Email notification"
+   },
+   {
+    "t": "Website announcement"
+   },
+   {
+    "t": "Service application notice"
+   }
+  ]
+ },
+ {
+  "k": "p",
+  "t": "**Last Updated:** 27 Jan 2026"
+ }
+]

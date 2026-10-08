@@ -58,17 +58,19 @@ function NavDemo() {
   );
 }
 
-export function SiteNav() {
+/** `home` = on the homepage, anchors stay in-page; elsewhere they lead back to "/". */
+export function SiteNav({ home = true }: { home?: boolean }) {
+  const base = home ? "" : "/";
   return (
-    <header className="c-nav" data-nav="">
-      <a aria-label="Clyra home" className="c-nav__brand" href="#top">
+    <header className="c-nav" data-nav="" data-solid={home ? undefined : "true"}>
+      <a aria-label="Clyra home" className="c-nav__brand" href={home ? "#top" : "/"}>
         <Wordmark />
       </a>
       <nav aria-label="Primary" className="c-nav__links">
-        <a href="#for-teachers">For Teachers</a>
-        <a href="#for-students">For Students</a>
-        <a href="#for-schools">For Schools</a>
-        <a href="#plan">How it works</a>
+        <a href={`${base}#for-teachers`}>For Teachers</a>
+        <a href={`${base}#for-students`}>For Students</a>
+        <a href={`${base}#for-schools`}>For Schools</a>
+        <a href={`${base}#plan`}>How it works</a>
       </nav>
       <div className="c-nav__end">
         <a className="c-navlogin" href={LINKS.login}>
@@ -411,7 +413,8 @@ export function ClosingSection() {
   );
 }
 
-export function SiteFooter() {
+export function SiteFooter({ home = true }: { home?: boolean }) {
+  const base = home ? "" : "/";
   return (
     <footer className="c-footer">
       <div className="c-footer__brand">
@@ -420,18 +423,18 @@ export function SiteFooter() {
       </div>
       <nav aria-label="Product" className="c-footer__col">
         <p>Product</p>
-        <a href="#for-teachers">For Teachers</a>
-        <a href="#for-students">For Students</a>
-        <a href="#for-schools">For Schools</a>
-        <a href="#plan">How it works</a>
+        <a href={`${base}#for-teachers`}>For Teachers</a>
+        <a href={`${base}#for-students`}>For Students</a>
+        <a href={`${base}#for-schools`}>For Schools</a>
+        <a href={`${base}#plan`}>How it works</a>
       </nav>
       <nav aria-label="Company" className="c-footer__col">
         <p>Company</p>
-        <a href="https://heyclyra.com/terms-conditions">Terms & Conditions</a>
-        <a href="https://heyclyra.com/privacy-policy">Privacy Policy</a>
+        <a href="/terms-conditions/">Terms & Conditions</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
         <a href={LINKS.contact}>Contact (hi@heyclyra.com)</a>
-        <a href="https://heyclyra.com/careers">Careers</a>
-        <a href="https://heyclyra.com/security">Security</a>
+        <a href="/careers/">Careers</a>
+        <a href="/security/">Security</a>
       </nav>
       <nav aria-label="Social" className="c-footer__col">
         <p>Social</p>
