@@ -10,7 +10,7 @@ import { Icon } from "@/components/icons";
 const APP_URL = (process.env.NEXT_PUBLIC_APP_URL || "https://app.heyclyra.com").replace(/\/$/, "");
 
 export const LINKS = {
-  demo: "https://calendly.com/heyclyra/demo",
+  demo: "/book-a-demo/",
   talk: "mailto:hi@heyclyra.com?subject=Clyra%20for%20our%20school",
   login: `${APP_URL}/login`,
   register: `${APP_URL}/register`,
@@ -56,7 +56,7 @@ export function Wordmark({ tone = "light" }: { tone?: "light" | "dark" }) {
 /* ------------------------------------------------------------------ */
 function NavDemo() {
   return (
-    <a className="c-navdemo js-mag" href={LINKS.demo} rel="noopener" target="_blank">
+    <a className="c-navdemo js-mag" href={LINKS.demo}>
       Book a demo
     </a>
   );
@@ -89,7 +89,7 @@ export function SiteNav({ home = true }: { home?: boolean }) {
 export function HeroActions() {
   return (
     <>
-      <a className="c-herodemo js-mag" href={LINKS.demo} rel="noopener" target="_blank">
+      <a className="c-herodemo js-mag" href={LINKS.demo}>
         <span>Book a demo</span>
         <Arrow />
       </a>
@@ -331,10 +331,8 @@ export function TrustSection() {
 /* Three doors                                                         */
 /* ------------------------------------------------------------------ */
 function DoorLink({ href, children }: { href: string; children: ReactNode }) {
-  // Only the demo booking (Calendly) leaves in a new tab; the app opens in place.
-  const external = href === LINKS.demo;
   return (
-    <a className="c-doorlink" href={href} {...(external ? { rel: "noopener", target: "_blank" } : {})}>
+    <a className="c-doorlink" href={href}>
       <span>{children}</span>
       <i aria-hidden="true" />
     </a>
@@ -409,7 +407,7 @@ export function ClosingSection() {
           <a className="c-closestart js-mag" href={LINKS.register}>
             Get started <Arrow />
           </a>
-          <a className="c-closedemo" href={LINKS.demo} rel="noopener" target="_blank">
+          <a className="c-closedemo" href={LINKS.demo}>
             Book a demo
           </a>
         </div>
