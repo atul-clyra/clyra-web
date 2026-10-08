@@ -15,6 +15,10 @@ npm run build      # static site written to out/
 npm start          # serve out/ locally
 ```
 
+**App links.** "Log in" and "Get started" go to `https://app.heyclyra.com` unless you set
+`NEXT_PUBLIC_APP_URL` at build time (see `.env.example`). To preview against a local dashboard, run
+`NEXT_PUBLIC_APP_URL=http://localhost:3000 npm run build`. Don't deploy that build.
+
 `out/` is plain HTML, CSS, JS and media, so it deploys to Vercel, Netlify, Cloudflare Pages, S3 or any CDN.
 
 ## Where things live

@@ -5,11 +5,15 @@ import { Icon } from "@/components/icons";
 /* ------------------------------------------------------------------ */
 /* Links                                                               */
 /* ------------------------------------------------------------------ */
+// The Clyra app. Production by default; set NEXT_PUBLIC_APP_URL at build time to preview
+// against another environment (e.g. http://localhost:3000 for a local dashboard).
+const APP_URL = (process.env.NEXT_PUBLIC_APP_URL || "https://app.heyclyra.com").replace(/\/$/, "");
+
 export const LINKS = {
   demo: "https://calendly.com/heyclyra/demo",
   talk: "mailto:hi@heyclyra.com?subject=Clyra%20for%20our%20school",
-  login: "https://app.heyclyra.com/login",
-  register: "https://app.heyclyra.com/register",
+  login: `${APP_URL}/login`,
+  register: `${APP_URL}/register`,
   contact: "mailto:hi@heyclyra.com",
 };
 
@@ -327,7 +331,8 @@ export function TrustSection() {
 /* Three doors                                                         */
 /* ------------------------------------------------------------------ */
 function DoorLink({ href, children }: { href: string; children: ReactNode }) {
-  const external = href.startsWith("http");
+  // Only the demo booking (Calendly) leaves in a new tab; the app opens in place.
+  const external = href === LINKS.demo;
   return (
     <a className="c-doorlink" href={href} {...(external ? { rel: "noopener", target: "_blank" } : {})}>
       <span>{children}</span>
