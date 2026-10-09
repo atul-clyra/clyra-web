@@ -102,6 +102,8 @@ Neither item blocks launch, but both need doing.
 npm install
 npm run dev        # http://localhost:3000
 npm run build      # static site written to out/
+npm run lint       # ESLint (next/core-web-vitals + TypeScript)
+npm run typecheck  # tsc --noEmit
 npm start          # serve out/ locally on http://localhost:3000
 ```
 

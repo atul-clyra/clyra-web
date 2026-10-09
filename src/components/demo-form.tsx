@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
+import Link from "next/link";
 
 import countries from "@/content/countries.json";
 
@@ -257,9 +258,9 @@ export function DemoForm() {
             you.
           </p>
         )}
-        <a className="c-docbtn c-docbtn--ghost" href="/">
+        <Link className="c-docbtn c-docbtn--ghost" href="/">
           Back to the homepage
-        </a>
+        </Link>
       </div>
     );
   }
