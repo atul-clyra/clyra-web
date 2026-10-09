@@ -219,12 +219,16 @@ export function DemoForm() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(p),
       });
-      const data = (await res.json().catch(() => ({}))) as { success?: boolean; message?: string };
-      if (res.ok && data.success !== false) {
+      // 200 → { success: true }. 400/429/500/502 → { success: false, message } (safe to show).
+      // 422 and anything unexpected have no message, so they get the generic retry line.
+      const data = (await res.json().catch(() => null)) as { success?: boolean; message?: string } | null;
+      if (res.ok && data?.success === true) {
         setState("done");
       } else {
         setState("idle");
-        setFailure(data.message || "We couldn't send your request. Please try again, or email hi@heyclyra.com.");
+        setFailure(
+          typeof data?.message === "string" && data.message ? data.message : "We couldn't send your request. Please try again, or email hi@heyclyra.com.",
+        );
       }
     } catch {
       setState("idle");
@@ -281,12 +285,12 @@ export function DemoForm() {
       <div className="c-form__row">
         <label className="c-field">
           <span className="c-field__label">Full name *</span>
-          <input autoComplete="name" name="name" onChange={(e) => set("name", e.target.value)} placeholder="Your full name" type="text" value={f.name} {...a11y("name")} />
+          <input autoComplete="name" maxLength={200} name="name" onChange={(e) => set("name", e.target.value)} placeholder="Your full name" type="text" value={f.name} {...a11y("name")} />
           {fieldErr("name")}
         </label>
         <label className="c-field">
           <span className="c-field__label">Work email *</span>
-          <input autoComplete="email" name="email" onChange={(e) => set("email", e.target.value)} placeholder="you@school.edu" type="email" value={f.email} {...a11y("email")} />
+          <input autoComplete="email" maxLength={200} name="email" onChange={(e) => set("email", e.target.value)} placeholder="you@school.edu" type="email" value={f.email} {...a11y("email")} />
           {fieldErr("email")}
         </label>
       </div>
@@ -306,7 +310,7 @@ export function DemoForm() {
         </label>
         <label className="c-field">
           <span className="c-field__label">School / institution *</span>
-          <input autoComplete="organization" name="school" onChange={(e) => set("school", e.target.value)} placeholder="e.g. Greenfield International School" type="text" value={f.school} {...a11y("school")} />
+          <input autoComplete="organization" maxLength={200} name="school" onChange={(e) => set("school", e.target.value)} placeholder="e.g. Greenfield International School" type="text" value={f.school} {...a11y("school")} />
           {fieldErr("school")}
         </label>
       </div>
@@ -328,7 +332,7 @@ export function DemoForm() {
           </span>
           <span className="c-phone c-phone--fixed">
             <span className="c-phone__dial">{COUNTRIES.find((c) => c.code === f.country)?.dial}</span>
-            <input autoComplete="tel-national" name="phone" onChange={(e) => set("phone", e.target.value)} placeholder="50 123 4567" type="tel" value={f.phone} />
+            <input autoComplete="tel-national" maxLength={40} name="phone" onChange={(e) => set("phone", e.target.value)} placeholder="50 123 4567" type="tel" value={f.phone} />
           </span>
         </label>
       </div>
@@ -361,6 +365,7 @@ export function DemoForm() {
           Anything else? <span className="c-field__opt">(optional)</span>
         </span>
         <textarea
+          maxLength={3000}
           name="message"
           onChange={(e) => set("message", e.target.value)}
           placeholder="Your goals, timelines, or the classes you'd like to start with."

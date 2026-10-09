@@ -1,7 +1,7 @@
 # Demo requests: backend handover
 
-The **Book a demo** page (`/book-a-demo/`) is built and live in this repo. It needs one backend
-endpoint to deliver requests by email.
+The **Book a demo** page (`/book-a-demo/`) posts to `https://api.clyralabs.com/v1/demo-request/`,
+which is live: it saves each lead and emails it to the team.
 
 ## What the endpoint must do
 
@@ -49,8 +49,19 @@ The site validates these fields client-side; the backend should validate them ag
 
 ## Response
 
-- Success: HTTP 200 with `{ "success": true }`. The page then shows its confirmation.
-- Failure: `{ "success": false, "message": "…" }` (or a non-2xx status). The page shows `message`, or a generic retry line.
+Success is HTTP 200 with `{ "success": true }`. Every handled failure is `{ "success": false, "message": "…" }`,
+and the message is safe to show to the visitor.
+
+| Status | When | What the page does |
+|---|---|---|
+| 200 | Saved and emailed | Shows the confirmation (only when `success` is `true`) |
+| 400 | A field failed validation | Shows `message` |
+| 422 | Required field missing, malformed body or wrong type (body is not the success/message shape) | Shows the generic retry line |
+| 429 | More than 5 requests from one IP in an hour | Shows `message`; no auto-retry |
+| 502 | Saved, but the email failed to send | Shows `message` |
+| 500 | Unexpected server error | Shows `message` |
+
+Anything else (network error, non-JSON body) gets the generic retry line.
 
 ## Also needed
 
@@ -60,12 +71,7 @@ The site validates these fields client-side; the backend should validate them ag
 
 ## Turning it on
 
-Build the site with the endpoint set:
+It is on. `.env.production` sets `NEXT_PUBLIC_DEMO_ENDPOINT`, so every `npm run build` posts to the API.
 
-```bash
-NEXT_PUBLIC_DEMO_ENDPOINT=https://api.clyralabs.com/v1/demo-request/ npm run build
-```
-
-**Until then:** submitting the form opens the visitor's own email app with a message to
-aditya@heyclyra.com and rohit@heyclyra.com containing all the details, so no request is lost. The
-visitor still has to press send.
+**Without the variable** (e.g. `npm run dev`), submitting the form opens the visitor's own email app
+with a message to aditya@heyclyra.com and rohit@heyclyra.com containing all the details.

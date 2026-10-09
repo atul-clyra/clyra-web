@@ -33,7 +33,7 @@ npm run build          # output: out/
 | Variable | Production value | What it does |
 |---|---|---|
 | `NEXT_PUBLIC_APP_URL` | leave unset, or `https://app.heyclyra.com` | Where "Log in" and "Get started" point. When unset it defaults to `https://app.heyclyra.com`. |
-| `NEXT_PUBLIC_DEMO_ENDPOINT` | the demo-request API URL, once it exists (see step 4) | Where the Book a demo form posts. When unset, the form opens the visitor's email app addressed to aditya@ and rohit@heyclyra.com instead. |
+| `NEXT_PUBLIC_DEMO_ENDPOINT` | already set in the committed `.env.production` to `https://api.clyralabs.com/v1/demo-request/` | Where the Book a demo form posts. When unset (e.g. `npm run dev`), the form opens the visitor's email app addressed to aditya@ and rohit@heyclyra.com instead. |
 
 > **Never deploy a build made with `NEXT_PUBLIC_APP_URL=http://localhost:3000`.** That setting is
 > only for previewing locally. Its "Log in" links would point at localhost.
@@ -68,11 +68,10 @@ npm run build          # output: out/
 
 Neither item blocks launch, but both need doing.
 
-- **Book a demo endpoint (new)**
-  - The full spec is in [`docs/DEMO-REQUESTS.md`](docs/DEMO-REQUESTS.md).
-  - In short: build `POST /v1/demo-request/` so that it emails each request **from `no-reply@heyclyra.com` to `aditya@heyclyra.com` and `rohit@heyclyra.com`**. Then rebuild the site with `NEXT_PUBLIC_DEMO_ENDPOINT` set.
+- **Book a demo endpoint (live)**
+  - `POST https://api.clyralabs.com/v1/demo-request/` saves the lead and emails it **from `no-reply@heyclyra.com` to `aditya@heyclyra.com` and `rohit@heyclyra.com`**. The spec is in [`docs/DEMO-REQUESTS.md`](docs/DEMO-REQUESTS.md).
+  - The production build picks the URL up from `.env.production`; nothing to set on the host.
   - The heyclyra.com domain needs SPF/DKIM records for the email provider, or the mail will land in spam.
-  - Until the endpoint exists, the form still works: it hands the request to the visitor's own email app.
 - **Careers endpoint (existing)**
   - The careers form posts to `https://api.clyralabs.com/v1/career/`, the same endpoint the old site used.
   - Confirm its CORS settings allow `https://heyclyra.com` (and `www`) once the new site is live.
@@ -80,7 +79,7 @@ Neither item blocks launch, but both need doing.
 ### 5. Checks after each deploy
 
 - [ ] `/`: the hero film scrubs as you scroll; the left-hand progress tracker lights up its six stages; no console errors.
-- [ ] Every "Book a demo" button opens `/book-a-demo/`. The form shows validation errors, and a submission reaches the inbox (or opens a pre-filled email until the endpoint exists).
+- [ ] Every "Book a demo" button opens `/book-a-demo/`. The form shows validation errors, and a submission shows the confirmation and reaches aditya@ and rohit@heyclyra.com.
 - [ ] "Log in" goes to `https://app.heyclyra.com/login` and "Get started" goes to `/register`.
 - [ ] `/careers/`: submitting an empty form shows four errors. Send one real test application and confirm it arrives.
 - [ ] `/terms-conditions/`, `/privacy-policy/`, `/security/` load, and their table-of-contents links jump to the right sections.
@@ -108,7 +107,7 @@ npm start          # serve out/ locally on http://localhost:3000
 
 **Previewing against a local copy of the app:** build with
 `NEXT_PUBLIC_APP_URL=http://localhost:3000 npm run build`, then serve `out/` on a different port,
-e.g. `npx serve out -l 4321`.
+e.g. `npx serve out -l 4321 --config ../serve.json`.
 
 ## Where things live
 

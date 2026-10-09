@@ -86,7 +86,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${interTight.variable} ${instrumentSerif.variable} ${plexMono.variable}`}>
       <head>
-        <link rel="preload" href="/assets/world/scene-01-poster.webp" as="image" type="image/webp" />
         <script
           type="application/ld+json"
           // Static, build-time JSON; no user input.

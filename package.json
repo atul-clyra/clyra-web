@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "serve out",
+    "start": "serve out --config ../serve.json",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },

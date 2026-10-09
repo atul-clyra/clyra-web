@@ -1,3 +1,5 @@
+import { preload } from "react-dom";
+
 import { MarkScene } from "@/components/mark-scene";
 import { ScrollScrub } from "@/components/scroll-scrub";
 import type { ScrollScrubScene } from "@/components/scroll-scrub";
@@ -24,6 +26,8 @@ const scenes: ScrollScrubScene[] = scrollScrubScenes.map((scene, i) =>
 );
 
 export default function Home() {
+  // Hero poster is the first paint; preload it here only, not on every page.
+  preload("/assets/world/scene-01-poster.webp", { as: "image", type: "image/webp" });
   return (
     <div className="c-site">
       <SiteMotion />
