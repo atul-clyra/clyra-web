@@ -445,7 +445,6 @@ export function SiteFooter({ home = true }: { home?: boolean }) {
         <a href="https://www.tiktok.com/@heyclyra">TikTok</a>
         <a href="https://www.linkedin.com/company/heyclyra">LinkedIn</a>
         <a href="https://x.com/heyclyra">X</a>
-        <a href="https://www.youtube.com/@heyclyra">YouTube</a>
       </nav>
       <p className="c-footer__copy">© 2026 Clyra</p>
     </footer>

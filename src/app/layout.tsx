@@ -79,7 +79,6 @@ const ORGANIZATION = {
     "https://www.tiktok.com/@heyclyra",
     "https://www.linkedin.com/company/heyclyra",
     "https://x.com/heyclyra",
-    "https://www.youtube.com/@heyclyra",
   ],
 };
 

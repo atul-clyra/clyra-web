@@ -90,7 +90,6 @@ Neither item blocks launch, but both need doing.
 
 ### 6. Open content items (owners: product / legal)
 
-- **Terms & Conditions:** the published text jumps from section 6 to section 9. Sections 7 and 8 exist only as subheadings inside section 6. The text was copied verbatim from the old site; legal should fix the numbering.
 - **Hero film:** the ring breaks into 4 pieces, but the copy says "five tools". Either change the copy or regenerate the film.
 - **Practise image** (`public/assets/ui/practise-devices.webp`): the "English" dot is purple, which isn't in the palette. This is minor and needs the image regenerated.
 
